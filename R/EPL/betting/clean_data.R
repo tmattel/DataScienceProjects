@@ -17,8 +17,8 @@ teams <- unique(fixtures$HOME.TEAM)
 # extract historic results
 history <- read.csv(link_history, stringsAsFactors = FALSE)
 
-# get info from the 2010 up to 2018
-seasons <- sapply(10:17, function(x) paste0(2000+x,'-',x+1))
+# get info from the 2010 up to 2021
+seasons <- sapply(10:21, function(x) paste0(2000+x,'-',x+1))
 
 recent.pl <- history %>%
   filter(Season %in% seasons, div == 'E0')
