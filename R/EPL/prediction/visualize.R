@@ -19,16 +19,16 @@ if(.Platform$OS.type != "unix") {
 # extract historic results
 history <- read.csv("https://raw.githubusercontent.com/tmattel/Various-projects/master/data/history.csv", stringsAsFactors = FALSE)
 
-# get info from the 2010 up to 2018
-seasons <- sapply(10:17, function(x) paste0(2000+x,'-',x+1))
+# get info from the 2010 up to 2021
+seasons <- sapply(10:21, function(x) paste0(2000+x,'-',x+1))
 
 
 graph_func <- function(season){
-  if (season[1] == "2017-18"){
-    title = "Last season: 2017-2018"
+  if (season[1] == "2021-22"){
+    title = "Last season: 2021-2022"
   }
   else{
-    title = "From 2010-11 to 2017-18"
+    title = "From 2010-11 to 2021-22"
   }
   data <- history %>% 
     filter (Season %in% season, div == 'E0') %>%
@@ -52,4 +52,4 @@ graph_func <- function(season){
 }
 
 graph_func(seasons)
-graph_func(c('2017-18'))
+graph_func(c('2021-22'))
