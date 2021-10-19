@@ -6,8 +6,8 @@
 #########################################
 library (dplyr)
 
-link_fixture = "https://raw.githubusercontent.com/tuangauss/DataScienceProjects/master/data/fixtures.csv"
-link_history = "https://raw.githubusercontent.com/tuangauss/DataScienceProjects/master/data/history.csv"
+link_fixture = "https://raw.githubusercontent.com/tmattel/DataScienceProjects/master/data/fixtures.csv"
+link_history = "https://raw.githubusercontent.com/tmattel/DataScienceProjects/master/data/history.csv"
 
 fixtures <- read.csv(link_fixture, stringsAsFactors = FALSE)
 
