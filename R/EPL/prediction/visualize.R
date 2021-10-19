@@ -17,7 +17,7 @@ if(.Platform$OS.type != "unix") {
 }
 
 # extract historic results
-history <- read.csv("https://raw.githubusercontent.com/tuangauss/Various-projects/master/data/history.csv", stringsAsFactors = FALSE)
+history <- read.csv("https://raw.githubusercontent.com/tmattel/Various-projects/master/data/history.csv", stringsAsFactors = FALSE)
 
 # get info from the 2010 up to 2018
 seasons <- sapply(10:17, function(x) paste0(2000+x,'-',x+1))
